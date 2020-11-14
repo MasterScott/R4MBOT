@@ -1,7 +1,6 @@
 '''
 R 4 M B O T | @ramsolobot
 '''
-from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
 from telepot.loop import MessageLoop
 from datetime import datetime, date
 from googletrans import Translator
