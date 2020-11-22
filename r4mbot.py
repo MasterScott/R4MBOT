@@ -20,9 +20,8 @@ def handle(msg):
     CHAT = -123456789 #chat para envio de mensagens automaticas
 
     if content_type == 'new_chat_member' and chat_id in id_permission:
-    	print('ENTROU!')
     	username = bot.getChat(chat_id)
-    	print(username)
+    	print(username,'entrou no chat')
     	msg = 'Bem-vindo(a) a {}!\nPara mais informações sobre o grupo leia a descrição!\n'.format(username['title'])
     	bot.sendMessage(chat_id, msg)
     if content_type == 'left_chat_member':
@@ -66,7 +65,6 @@ def handle(msg):
 
     if chat_id in id_permission:
     	if '/tweet' in msg['text']: #usa a API do twitter para twittar
-    		print("ACCESS GRANTED",chat_id)
     		arg = msg['text'][7:]
     		print('Tweet:',arg)
     		tweetLS(arg)
@@ -79,12 +77,11 @@ def handle(msg):
     		tweet = get_tweets(chat_id,user[0],user[1])
 
     	if '/deltweet' in msg['text']: #deleta um tweat pelo ID
-    		print("ACCESS GRANTED",chat_id)
     		id = msg['text'][10:]
     		api.destroy_status(id)
     		bot.sendMessage(chat_id, '[-] Tweet Deletado\nID: '+id)
     		pass
-
+	#**************************************************
 def getBTCprice():
 	print('[!] Buscando valor do BTC')
 	request = requests.get('https://www.mercadobitcoin.net/api/BTC/ticker/')
