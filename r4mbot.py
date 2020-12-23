@@ -1,5 +1,5 @@
 '''
-R 4 M B O T | @r4mbot
+R 4 M B O T | @r4mbot_the_bot
 '''
 from telepot.loop import MessageLoop
 from datetime import datetime, date
