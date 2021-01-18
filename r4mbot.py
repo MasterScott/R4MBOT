@@ -59,7 +59,7 @@ def handle(msg):
     	else:
     		bot.sendMessage(chat_id, helpopt)
     if msg['text'] == '/devel':
-    	bot.sendMessage(chat_id, "R 4 M B O T\nDesenvolvedor: @immartinspy\nTwitter: immartinspy.com/r4msolo\n\nhttps://immartinspy.github.com")
+    	bot.sendMessage(chat_id, "R 4 M B O T\nDesenvolvedor: @immartinspy\nTwitter: twitter.com/immartinspy\n\nhttps://immartinspy.github.com")
 
     #**************** ADMIN FUNCTIONS *****************
 
